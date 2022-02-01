@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <h2>Edit Patient</h2>
+    <form #editpatientForm="ngForm">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"
+            #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name is required
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="text" class="form-control" id="Age"  required [(ngModel)]="model.age" name="age" #age="ngModel">
+            <div [hidden]="age.valid || age.pristine" class="alert alert-danger">
+                Age is Required </div>
+        </div>
+        <div class="form-group">
+            <label style="padding-right: 10px ;">Gender:</label>
+            <label  style="padding-right: 10px ;">
+                <input type="radio"  id="female" value="female" required [(ngModel)]="model.gender"
+                    name="gender" #gender="ngModel">
+                    Female
+            </label>
+                    <label  style="padding-right: 10px ;">
+                <input type="radio"  id="male" value="male" required [(ngModel)]="model.gender" name="gender"
+                    #gender="ngModel">
+                Male
+                    </label>
+            <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
+                Gender is Required </div>
+        </div>
+
+        <div class="form-group">
+            <label>Check-in Date</label>
+            <input type="text" class="form-control" id="CheckInDate" required [(ngModel)]="model.CheckInDate" name="CheckINDate" #CheckInDate="ngModel">
+            <div [hidden]="CheckInDate.valid || CheckInDate.pristine" class="alert alert-danger">
+                Check-in Date is Required </div>     
+        </div>
+
+        <button class="btn btn-primary" type="save">Save</button>
+        <button class="btn btn-primary" type="cancel">Cancel</button>
+
+    </form>
+</div>

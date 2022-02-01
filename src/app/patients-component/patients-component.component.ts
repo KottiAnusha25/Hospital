@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'app-patients-component',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./patients-component.component.css']
 })
 export class PatientsComponentComponent implements OnInit {
+  columnDefs: ColDef[] = [];
 
+rowData = [];
+   
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <h2>Add Patient</h2>
+    <form #patientForm="ngForm">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="userModel.name" name="name"
+            #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name is required
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="text" class="form-control" id="Age" required [(ngModel)]="userModel.age" name="age"
+                #age="ngModel">
+            <div [hidden]="age.valid || age.pristine" class="alert alert-danger">
+                Age is Required </div>
+        </div>
+        <div class="form-group">
+            <label style="padding-right: 10px ;">Gender</label>
+            <label  style="padding-right: 10px ;">
+                <input type="radio"  id="female" value="female" required [(ngModel)]="userModel.gender"
+                    name="gender" #gender="ngModel">
+                Female
+            </label>
+
+            <label  style="padding-right: 10px ;">
+                <input type="radio"  id="male" value="male" required [(ngModel)]="userModel.gender" name="gender"
+                    #gender="ngModel">
+                Male
+            </label>
+            <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
+                Gender is Required </div>
+        </div>
+
+        <div class="form-group">
+            <label>Check-in Date</label>
+            <input type="text" class="form-control" id="CheckInDate" required [(ngModel)]="userModel.CheckInDate"
+                name="CheckINDate" #CheckInDate="ngModel">
+            <div [hidden]="CheckInDate.valid || CheckInDate.pristine" class="alert alert-danger">
+                Check-in Date is Required </div>
+        </div>
+
+        <button class="btn btn-primary" type="save">Save</button>
+        <button class="btn btn-primary" type="cancel">Cancel</button>
+
+    </form>
+</div>
