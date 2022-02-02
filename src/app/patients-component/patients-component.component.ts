@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ColDef } from 'ag-grid-community';
+import { ColDef, ICellRendererParams } from 'ag-grid-community';
 import { Router } from '@angular/router';
+import { MyActionsRenderer } from '../shared/MyActionsRenderer';
 
 
 
@@ -17,9 +18,15 @@ export class PatientsComponentComponent {
     { field: 'Age' },
     { field: 'Sex' },
     { field: 'CheckIn' },
-    { field: 'Actions' }
+    {
+      headerName: "Action", field: "action",
+      cellRenderer: 'allActionsRenderer'
+    }
   ];
 
+  frameworkComponents = {
+    allActionsRenderer: MyActionsRenderer,
+  };
   rowData = [
     { Name: 'Patient1', Age: 34, Sex: 'Male', CheckIn: '01/05/2021' },
     { Name: 'Patient2', Age: 44, Sex: 'Male', CheckIn: '01/05/2021' },
@@ -30,6 +37,10 @@ export class PatientsComponentComponent {
   constructor(private _router: Router) { }
   navigateToAddPatient() {
     this._router.navigate(['AddPatient'])
+  }
+
+  edit(params: ICellRendererParams) {
+    console.log('Params', params);
   }
   onClick() {
 

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { PatientHistoryComponent } from './patient-history/patient-history.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { MyActionsRenderer } from './shared/MyActionsRenderer';
 
 
 
@@ -19,7 +20,8 @@ import { AgGridModule } from 'ag-grid-angular';
     PatientsComponentComponent,
     AddPatientComponent,
     EditPatientComponent,
-    PatientHistoryComponent
+    PatientHistoryComponent,
+    MyActionsRenderer
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { AgGridModule } from 'ag-grid-angular';
     AgGridModule.withComponents([])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[MyActionsRenderer]
 })
 export class AppModule { }
