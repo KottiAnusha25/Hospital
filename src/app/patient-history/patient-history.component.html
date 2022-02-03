@@ -1,80 +1,113 @@
 <div class="container-fluid">
-    <h2>Patient History</h2>
+    <h2><i class='fa fa-user-md'></i>Patient History</h2>
     <form>
+        <h3>Basic Stats</h3>
+
         <div class="form-group">
-            <label style="padding-right: 10px;">Smoking:</label>
-            <label  style="padding-right: 10px ;">
-            <input type="radio" id="HeavySmoker" value="HeavySmoker" >
-            HeavySmoker
+            
+            <label style="padding-right: 10px;">*Height(cm):</label>
+            <input type="text" id="Height" class="form-control">
+            <label style="padding-right: 10px;">Weight:</label>
+            <input type="text" id="Weight" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label style="padding-right: 15px;">Smoking:</label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="HeavySmoker" value="HeavySmoker">
+                HeavySmoker
             </label>
-            <label  style="padding-right: 10px ;">
-                <input type="radio" id="ModerateSmoker" value="ModerateSmoker" >
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="ModerateSmoker" value="ModerateSmoker">
                 ModerateSmoker
-                </label>
-                <label  style="padding-right: 10px ;">
-                    <input type="radio" id="LightSmoker" value="LightSmoker" >
-                    LightSmoker
-                    </label>  
-                    <label  style="padding-right: 10px ;">
-                        <input type="radio" id="CausalSmoker" value="CausalSmoker">
-                        CausalSmoker
-                        </label>  
-                        <label  style="padding-right: 10px ;">
-                            <input type="radio" id="NonSmoker" value="NonSmoker" >
-                            NonSmoker
-                            </label>  
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="LightSmoker" value="LightSmoker">
+                LightSmoker
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="CausalSmoker" value="CausalSmoker">
+                CausalSmoker
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="NonSmoker" value="NonSmoker">
+                NonSmoker
+            </label>
         </div>
         <div class="form-group">
-            <label style="padding-right: 10px;">Drinking:</label>
-            <label  style="padding-right: 10px ;">
-            <input type="radio" id="HeavyDrinker" value="HeavyDrinker">
-            HeavyDrinker
+            <label style="padding-right: 15px;">Drinking:</label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="HeavyDrinker" value="HeavyDrinker">
+                HeavyDrinker
             </label>
-            <label  style="padding-right: 10px ;">
+            <label style="padding-right: 15px ;">
                 <input type="radio" id="ModerateDrinker" value="ModerateDrinker">
                 ModerateDrinker
-                </label>
-                <label  style="padding-right: 10px ;">
-                    <input type="radio" id="LightDrinker" value="LightDrinker">
-                    LightDrinker
-                    </label>  
-                    <label  style="padding-right: 10px ;">
-                        <input type="radio" id="CausalDrinker" value="CausalDrinker">
-                        CausalDrinker
-                        </label>  
-                        <label  style="padding-right: 10px ;">
-                            <input type="radio" id="NonDrinker" value="NonDrinker">
-                            NonDrinker
-                            </label>  
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="LightDrinker" value="LightDrinker">
+                LightDrinker
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="CausalDrinker" value="CausalDrinker">
+                CausalDrinker
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="NonDrinker" value="NonDrinker">
+                NonDrinker
+            </label>
         </div>
         <div class="form-group">
-            <label style="padding-right: 10px;">DrugUsage:</label>
-            <label  style="padding-right: 10px ;">
-            <input type="radio" id="Amphetamines" value="Amphetamines">
-            Amphetamines
+            <label style="padding-right: 15px;">DrugUsage:</label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="Amphetamines" value="Amphetamines">
+                Amphetamines
             </label>
-            <label  style="padding-right: 10px ;">
+            <label style="padding-right: 15px ;">
                 <input type="radio" id="Heroine" value="Heroine">
                 Heroine
-                </label>
-                <label  style="padding-right: 10px ;">
-                    <input type="radio" id="Barbiturates" value="Barbiturates">
-                    Barbiturates
-                    </label>
-                    <label  style="padding-right: 10px ;">
-                        <input type="radio" id="Marijuana" value="Marijuana">
-                        Marijuana
-                        </label>
-                        <label  style="padding-right: 10px ;">
-                            <input type="radio" id="NoDrugs" value="NoDrugs">
-                            NoDrugs
-                            </label>
-                            <label  style="padding-right: 10px ;">others
-                                <input type="text" id="others" name="others">
-                                
-                                </label>
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="Barbiturates" value="Barbiturates">
+                Barbiturates
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="Marijuana" value="Marijuana">
+                Marijuana
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="NoDrugs" value="NoDrugs">
+                NoDrugs
+            </label>
+            <label style="padding-right: 15px ;">others
+                <input type="text" id="others" name="others">
+            </label>
+
 
         </div>
-       
+        <div class="form-group">
+            <label style="padding-right: 15px;">Surgeries:</label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="HeartSurgery" value="HeartSurgery">
+                HeartSurgery
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="BreatSurgery" value="BreatSurgery">
+                BreatSurgery
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="LegSurgery" value="LegSurgery">
+                LegSurgery
+            </label>
+            <label style="padding-right: 15px ;">
+                <input type="radio" id="ArmSurgery" value="ArmSurgery">
+                ArmSurgery
+            </label>
+            <label style="padding-right: 15px ;">others
+                <input type="text" id="others" name="others">
+            </label>
+        </div>
+        <button class="btn btn-primary" type="save">Save</button>
+        <button class="btn btn-primary" type="cancel">Back To Dashboard</button>
     </form>
 </div>

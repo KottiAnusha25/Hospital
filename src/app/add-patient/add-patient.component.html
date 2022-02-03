@@ -27,6 +27,11 @@
                     #gender="ngModel">
                 Male
             </label>
+            <label  style="padding-right: 10px ;">
+                <input type="radio"  id="undisclosed" value="undisclosed" required [(ngModel)]="userModel.gender" name="gender"
+                    #gender="ngModel">
+                    Undisclosed
+            </label>
             <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
                 Gender is Required </div>
         </div>

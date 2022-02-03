@@ -3,9 +3,6 @@ import { ColDef, ICellRendererParams } from 'ag-grid-community';
 import { Router } from '@angular/router';
 import { MyActionsRenderer } from '../shared/MyActionsRenderer';
 
-
-
-
 @Component({
   selector: 'app-patients-component',
   templateUrl: './patients-component.component.html',

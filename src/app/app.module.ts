@@ -10,6 +10,8 @@ import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { PatientHistoryComponent } from './patient-history/patient-history.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { MyActionsRenderer } from './shared/MyActionsRenderer';
+import { DeletePatientComponent } from './delete-patient/delete-patient.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -21,13 +23,15 @@ import { MyActionsRenderer } from './shared/MyActionsRenderer';
     AddPatientComponent,
     EditPatientComponent,
     PatientHistoryComponent,
-    MyActionsRenderer
+    MyActionsRenderer,
+    DeletePatientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

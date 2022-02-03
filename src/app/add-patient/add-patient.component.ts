@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { Patient } from '../patient';
 
+
 @Component({
   selector: 'app-add-patient',
   templateUrl: './add-patient.component.html',
@@ -8,5 +9,6 @@ import { Patient } from '../patient';
 })
 export class AddPatientComponent  {
       userModel= new Patient();
-
+      
+    
 }
