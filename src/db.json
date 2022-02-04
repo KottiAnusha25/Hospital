@@ -1,0 +1,9 @@
+{
+    "PatientsData":[
+        { "Name": "Patient1", "Age": 34, "Gender": "Male", "CheckInDate": "01/05/2021" },
+        { "Name": "Patient2", "Age": 44, "Gender": "Male", "CheckInDate": "01/05/2021" },
+        { "Name": "Patient3", "Age": 56, "Gender": "Male", "CheckInDate": "01/05/2021" },
+        { "Name": "Patient4", "Age": 75, "Gender": "Male", "CheckInDate": "01/05/2021" },
+        { "Name": "Patient5", "Age": 58, "Gender": "Male", "CheckInDate": "01/05/2021" }
+      ]
+}

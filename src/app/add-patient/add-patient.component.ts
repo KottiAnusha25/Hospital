@@ -1,5 +1,8 @@
 import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 import { Patient } from '../patient';
+import { PatientServiceService } from '../patient-service.service';
+import { AddPatient } from './AddPatient';
 
 
 @Component({
@@ -8,7 +11,21 @@ import { Patient } from '../patient';
   styleUrls: ['./add-patient.component.css']
 })
 export class AddPatientComponent  {
-      userModel= new Patient();
+      patient= new Patient();
+      constructor(private router: Router, private patientService: PatientServiceService) { }
+     
+   
+      onSubmit(){
+        this.patientService.enroll(this.patient)
+         .subscribe(
+           data=> {
+             if(!!data) {
+                this.router.navigate(['PatientsComponent']);
+             }
+           }
+          
+         )
+      }
+        
       
-    
 }
