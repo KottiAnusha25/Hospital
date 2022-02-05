@@ -1,82 +1,109 @@
 <div class="container-fluid">
     <h2><i class='fa fa-user-md'></i>Patient History</h2>
-    <form>
+    <form #patientForm="ngForm" >
         <h3>Basic Stats</h3>
-
         <div class="form-group">
-            
-            <label style="padding-right: 10px;">*Height(cm):</label>
-            <input type="text" id="Height" class="form-control">
-            <label style="padding-right: 10px;">Weight:</label>
-            <input type="text" id="Weight" class="form-control">
+            <label>Name</label>
+            <input type="text" class="form-control" id="Name" required [(ngModel)]="history.name" name="name"
+                #name="ngModel">
+            <div [hidden]="Height.valid || Height.pristine" class="alert alert-danger">
+               <small>Name is required</small> 
+            </div> 
         </div>
+        <div class="form-group">
+            <label>Height</label>
+            <input type="text" class="form-control" id="Height" required [(ngModel)]="history.Height" name="Height"
+                #Height="ngModel">
+            <div [hidden]="Height.valid || Height.pristine" class="alert alert-danger">
+               <small>Height is required</small> 
+            </div> 
+            <label>Weight</label>
+            <input type="text" class="form-control" id="Weight" required [(ngModel)]="history.Weight" name="Weight"
+                #Weight="ngModel">
+            <div [hidden]="Weight.valid || Weight.pristine" class="alert alert-danger">
+               <small>Weight is required</small> 
+            </div>       
+        div class="form-group">
+        <label style="padding-right: 15px;">Smoker:</label>
+        <label style="padding-right: 15px ;">
+            <input type="radio" id="HeavySmoker" value="HeavySmoker" required [(ngModel)]="history.Smoker" name="HeavySmoker"
+            #Smoker="ngModel">
+            HeavySmoker
+        </label>
+        <label style="padding-right: 15px ;">
+            <input type="radio" id="ModerateSmoker" value="ModerateSmoker" required [(ngModel)]="history.Smoker" name="ModerateSmoker"
+            #Smoker="ngModel">
+            ModerateSmoker
+        </label>
+        <label style="padding-right: 15px ;">
+            <input type="radio" id="LightSmoker" value="LightSmoker" required [(ngModel)]="history.Smoker" name="LightSmoker"
+            #Smoker="ngModel">
+            LightSmoker
+        </label>
+        <label style="padding-right: 15px ;">
+            <input type="radio" id="CausalSmoker" value="CausalSmoker" required [(ngModel)]="history.Smoker" name="CausalSmoker"
+            #Smoker="ngModel">
+            CausalSmoker
+        </label>
+        <label style="padding-right: 15px ;">
+            <input type="radio" id="NonSmoker" value="NonSmoker" required [(ngModel)]="history.Smoker" name="NonSmoker"
+            #Smoker="ngModel">
+            NonSmoker
+        </label>
+    </div>   
         
-        <div class="form-group">
-            <label style="padding-right: 15px;">Smoking:</label>
-            <label style="padding-right: 15px ;">
-                <input type="radio" id="HeavySmoker" value="HeavySmoker">
-                HeavySmoker
-            </label>
-            <label style="padding-right: 15px ;">
-                <input type="radio" id="ModerateSmoker" value="ModerateSmoker">
-                ModerateSmoker
-            </label>
-            <label style="padding-right: 15px ;">
-                <input type="radio" id="LightSmoker" value="LightSmoker">
-                LightSmoker
-            </label>
-            <label style="padding-right: 15px ;">
-                <input type="radio" id="CausalSmoker" value="CausalSmoker">
-                CausalSmoker
-            </label>
-            <label style="padding-right: 15px ;">
-                <input type="radio" id="NonSmoker" value="NonSmoker">
-                NonSmoker
-            </label>
-        </div>
         <div class="form-group">
             <label style="padding-right: 15px;">Drinking:</label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="HeavyDrinker" value="HeavyDrinker">
+                <input type="radio" id="HeavyDrinker" value="HeavyDrinker" required [(ngModel)]="history.Drinker" name="HeavyDrinker"
+                #Drinker="ngModel">
                 HeavyDrinker
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="ModerateDrinker" value="ModerateDrinker">
+                <input type="radio" id="ModerateDrinker" value="ModerateDrinker" required [(ngModel)]="history.Drinker" name="ModerateDrinker"
+                #Drinker="ngModel">
                 ModerateDrinker
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="LightDrinker" value="LightDrinker">
+                <input type="radio" id="LightDrinker" value="LightDrinker" required [(ngModel)]="history.Drinker" name="LightDrinker"
+                #Drinker="ngModel">
                 LightDrinker
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="CausalDrinker" value="CausalDrinker">
+                <input type="radio" id="CausalDrinker" value="CausalDrinker" required [(ngModel)]="history.Drinker" name="CausalDrinker"
+                #Drinker="ngModel">
                 CausalDrinker
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="NonDrinker" value="NonDrinker">
+                <input type="radio" id="NonDrinker" value="NonDrinker" required [(ngModel)]="history.Drinker" name="NonDrinker"
+                #Drinker="ngModel">
                 NonDrinker
             </label>
         </div>
         <div class="form-group">
             <label style="padding-right: 15px;">DrugUsage:</label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="Amphetamines" value="Amphetamines">
+                <input type="radio" id="Amphetamines" value="Amphetamines" required [(ngModel)]="history.DrugUsage" name="Amphetamines"
+                #DrugUsage="ngModel">
                 Amphetamines
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="Heroine" value="Heroine">
+                <input type="radio" id="Heroine" value="Heroine" required [(ngModel)]="history.DrugUsage" name="Heroine"
+                #DrugUsage="ngModel">
                 Heroine
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="Barbiturates" value="Barbiturates">
+                <input type="radio" id="Barbiturates" value="Barbiturates" required [(ngModel)]="history.DrugUsage" name="Barbiturates"
+                #DrugUsage="ngModel">
                 Barbiturates
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="Marijuana" value="Marijuana">
+                <input type="radio" id="Marijuana" value="Marijuana" required [(ngModel)]="history.DrugUsage" name="Marijuana"
+                #DrugUsage="ngModel">
                 Marijuana
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="NoDrugs" value="NoDrugs">
+                <input type="radio" id="NoDrugs" value="NoDrugs" required [(ngModel)]="history.DrugUsage" name="NoDrugs" #DrugUsage="ngModel">
                 NoDrugs
             </label>
             <label style="padding-right: 15px ;">others
@@ -88,28 +115,32 @@
         <div class="form-group">
             <label style="padding-right: 15px;">Surgeries:</label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="HeartSurgery" value="HeartSurgery">
+                <input type="radio" id="HeartSurgery" value="HeartSurgery" required [(ngModel)]="history.Surgeries" name="HeartSurgery" #Surgeries="ngModel">
                 HeartSurgery
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="BreatSurgery" value="BreatSurgery">
+                <input type="radio" id="BreatSurgery" value="BreatSurgery" required [(ngModel)]="history.Surgeries" name="BreatSurgery" #Surgeries="ngModel">
                 BreatSurgery
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="LegSurgery" value="LegSurgery">
+                <input type="radio" id="LegSurgery" value="LegSurgery" required [(ngModel)]="history.Surgeries" name="LegSurgery" #Surgeries="ngModel">
                 LegSurgery
             </label>
             <label style="padding-right: 15px ;">
-                <input type="radio" id="ArmSurgery" value="ArmSurgery">
+                <input type="radio" id="ArmSurgery" value="ArmSurgery" required [(ngModel)]="history.Surgeries" name="ArmSurgery" #Surgeries="ngModel">
                 ArmSurgery
             </label>
             <label style="padding-right: 15px ;">others
-                <input type="text" id="others" name="others">
+                <input type="text" id="others" name="others" >
             </label>
         </div>
-        <button class="btn btn-primary" type="save">Save</button>
-        <button class="btn btn-primary" type="button" class="btn" (click)="navigateToPatientsComponent()">BackToDashboard</button>
+        <button [disabled]="patientForm.form.invalid" class="btn btn-primary" type="save">Save</button>
+        <button class="btn btn-primary" type="button" class="btn btn-primary" (click)="navigateToPatientsComponent()">BackToDashboard</button>
     </form>
   
-    
-</div>
+</div>    
+
+
+
+
+

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PatientsComponentComponent} from './patients-component/patients-component.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { PatientHistoryComponent } from './patient-history/patient-history.component';
 import { AgGridModule } from 'ag-grid-angular';
@@ -13,7 +13,9 @@ import { MyActionsRenderer } from './shared/MyActionsRenderer';
 import { DeletePatientComponent } from './delete-patient/delete-patient.component';
 import {HttpClientModule} from '@angular/common/http';
 
-
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,17 +25,18 @@ import {HttpClientModule} from '@angular/common/http';
     AddPatientComponent,
     EditPatientComponent,
     PatientHistoryComponent,
-    MyActionsRenderer,
-    DeletePatientComponent
+    MyActionsRenderer
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,ReactiveFormsModule,
     AgGridModule.withComponents([]),
-    HttpClientModule
+    HttpClientModule ,
+    ConfirmDialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ConfirmationService],
   bootstrap: [AppComponent],
   entryComponents:[MyActionsRenderer]
 })

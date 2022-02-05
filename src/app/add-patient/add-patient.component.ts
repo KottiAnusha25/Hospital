@@ -16,7 +16,7 @@ export class AddPatientComponent  {
      
    
       onSubmit(){
-        this.patientService.enroll(this.patient)
+        this.patientService.push(this.patient)
          .subscribe(
            data=> {
              if(!!data) {

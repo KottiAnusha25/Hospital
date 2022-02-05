@@ -17,13 +17,16 @@ export class EditPatientComponent  {
       constructor(
         private route: ActivatedRoute,
         private router: Router) {}
-    
+  
+        navigateToPatientsComponent() {
+          this.router.navigate(['PatientsComponent'])
+        }
+         
+        onClick(){}
       ngOnInit() {
         let tempJsonObj: any = this.route
           .snapshot.queryParams;
-          console.log('this.tempJsonObj : ',tempJsonObj);
           this.model = JSON.parse(tempJsonObj.patientObj);
-          console.log('this.moddel : ',this.model);
       }
     
       ngOnDestroy() {

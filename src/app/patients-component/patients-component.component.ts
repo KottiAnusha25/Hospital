@@ -30,16 +30,15 @@ export class PatientsComponentComponent implements OnInit {
   constructor(private _router: Router, private patientService: PatientServiceService) { }
   ngOnInit(): void {
     this.patientService.getPatientsData().subscribe((data :any) => {
-        console.log('PatientsData :: ', data);
         this.rowData = [...data];
     });
   }
+
   navigateToAddPatient() {
     this._router.navigate(['AddPatient'])
   }
 
   edit(params: ICellRendererParams) {
-    console.log('Params', params);
   }
   onClick() {
 

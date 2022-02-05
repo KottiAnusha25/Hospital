@@ -1,0 +1,50 @@
+{
+
+    "History":[
+    {
+      "name": "patient1",
+      "Height": 5.6,
+      "Weight": 56,
+      "Smoker": "HeavySmoker",
+      "Drinker":"HeavyDrinker",
+      "DrugUsage":"Heroine",
+      "Surgeries":"HeartSurgery"
+    },
+    {
+        "Name": "patient2",
+        "Height": 4.6,
+        "Weight": 76,
+        "Smoker": "Yes",
+        "Drinker":"HeavyDrinker",
+      "DrugUsage":"Heroine",
+      "Surgeries":"HeartSurgery"
+    },
+    {
+      "Name": "patient3",
+      "Height": 4.6,
+      "Weight": 76,
+      "Smoker": "Yes",
+      "Drinker":"HeavyDrinker",
+    "DrugUsage":"Heroine",
+    "Surgeries":"HeartSurgery"
+    },
+    {
+      "Name": "patient4",
+      "Height": 4.6,
+      "Weight": 76,
+      "Smoker": "Yes",
+      "Drinker":"HeavyDrinker",
+    "DrugUsage":"Heroine",
+    "Surgeries":"HeartSurgery"
+    },
+    {
+      "Name": "patient5",
+      "Height": 4.6,
+      "Weight": 76,
+      "Smoker": "Yes",
+      "Drinker":"HeavyDrinker",
+    "DrugUsage":"Heroine",
+    "Surgeries":"HeartSurgery"
+    }
+  ]
+}
